@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - JS Separado</title>
+    
+    <!-- Estilos CSS embutidos diretamente no HTML -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .resultado {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .resultado p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Exercício 1 com Visualização em HTML</h1>
+
+        <!-- Seção para o item (a) -->
+        <h2>a) Função de Saudação</h2>
+        <div id="resultado-a" class="resultado">
+            <!-- O resultado da função de saudação aparecerá aqui -->
+        </div>
+
+        <!-- Seção para o item (b) -->
+        <h2>b) Função de Tabuada</h2>
+        <div id="resultado-b" class="resultado">
+            <!-- O resultado da função de tabuada aparecerá aqui -->
+        </div>
+
+        <!-- Seção para o item (c) -->
+        <h2>c) Funções Reescreritas (Arrow Functions)</h2>
+        <div id="resultado-c" class="resultado">
+            <!-- O resultado das arrow functions aparecerá aqui -->
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript (com 'defer' para carregar após o HTML) -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>
