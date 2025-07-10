@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Lógica e Salários</title>
+    <style>
+        /* Estilos para melhorar a apresentação */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .card {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        span.result {
+            font-weight: bold;
+            color: #16a085;
+        }
+        #monthly-report-container p {
+            margin: 5px 0 5px 20px;
+            border-left: 3px solid #3498db;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Exercício 3 - Resultados</h1>
+
+        <!-- Parte 1 -->
+        <div class="card">
+            <h2>Parte 1: Operações Lógicas</h2>
+            <ul>
+                <li><code>5 > 20 && 5 < 2</code> ➜ <span id="resultA" class="result"></span></li>
+                <li><code>5 === 5 || 5 === "5"</code> ➜ <span id="resultB" class="result"></span></li>
+                <li><code>!(20 > 50)</code> ➜ <span id="resultC" class="result"></span></li>
+                <li><code>!(20 > 50 || 50 > 60)</code> ➜ <span id="resultD" class="result"></span></li>
+            </ul>
+        </div>
+
+        <!-- Parte 2 -->
+        <div class="card">
+            <h2>Parte 2: Cálculo de Salário do RH</h2>
+            <ul>
+                <li>Salário Fixo + Auxílio Creche: <span id="salarioComAuxilio" class="result"></span></li>
+                <li>Comissão em Janeiro: <span id="comissaoJaneiro" class="result"></span></li>
+                <li>Desconto INSS em Janeiro: <span id="descontoINSSJaneiro" class="result"></span></li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Relatório de Salário Líquido Mensal</h3>
+            <div id="monthly-report-container">
+                <!-- Salários mensais serão inseridos aqui pelo JavaScript -->
+            </div>
+            
+            <h3 style="margin-top: 30px;">Média Salarial</h3>
+            <p>A média salarial de Janeiro a Junho foi: <span id="mediaSalarial" class="result"></span></p>
+        </div>
+    </div>
+
+    <!-- O atributo 'defer' garante que o script só execute após o HTML ser carregado -->
+    <script src="script.js" defer></script>
+</body>
+</html>
