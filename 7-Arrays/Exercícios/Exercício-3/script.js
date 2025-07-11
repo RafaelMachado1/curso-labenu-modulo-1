@@ -1,56 +1,49 @@
-// Objeto inicial
-const pokemon1 = {
-	nome: "Bulbasaur",
-	tipo: "Grama",
-	nivel: 5
-};
+// Obs: copie os arrays criados no exercício 1 para dentro do arquivo script.js do exercício 3.
+const arrayDeNumeros = [42, 15, 99, 7, 203, 58];
+const arrayDeStrings = ["JavaScript", "HTML", "CSS", "React", "Node.js"];
+const arrayMisto = [10, "Olá, mundo!", true, 25.5, false, "Fim do array"];
 
-// a) Crie uma cópia do objeto, trocando nome por “Squirtle” e tipo por “Água”.
-// Usamos o spread '...' para copiar todas as propriedades de pokemon1
-// e depois sobrescrevemos as propriedades 'nome' e 'tipo'.
-const pokemon2 = {
-    ...pokemon1,
-    nome: "Squirtle",
-    tipo: "Água"
-};
+// Criando cópias dos arrays usando o método slice()
+const arrayDeNumerosCopia = arrayDeNumeros.slice();
+const arrayDeStringsCopia = arrayDeStrings.slice();
+const arrayMistoCopia = arrayMisto.slice();
 
-// b) No objeto original, adicione a propriedade 'ataques' com um array vazio.
-pokemon1.ataques = [];
 
-// c) Crie um objeto de ataque e adicione-o ao array 'ataques' do objeto original.
-const ataqueInvestida = {
-    nome: "Investida",
-    dano: 40,
-    tipo: "Normal",
-    precisao: 100
-};
-pokemon1.ataques.push(ataqueInvestida);
+// a) Adiciona um item ao início da cópia do primeiro array
+function adicionarItemInicio(copiaArray) {
+    // O método unshift() adiciona um ou mais elementos ao início de um array.
+    copiaArray.unshift(101);
 
-// d) Na cópia (Squirtle), adicione a propriedade 'ataques' a partir do espalhamento
-// da propriedade de mesmo nome do objeto original.
-// Isso cria uma cópia do array de ataques, garantindo que os dois pokémons
-// tenham listas de ataques independentes a partir deste ponto.
-pokemon2.ataques = [...pokemon1.ataques];
+    console.log("--- a) Adicionando item ao início da cópia ---");
+    console.log("Array Original:", arrayDeNumeros);
+    console.log("Cópia Modificada:", copiaArray);
+}
 
-// e) Para o objeto original, adicione o ataque "Folha Navalha".
-pokemon1.ataques.push({
-    nome: "Folha Navalha",
-    dano: 45,
-    tipo: "Grama",
-    precisao: 100
-});
 
-// f) Para a cópia, adicione o ataque "Jato de Água".
-pokemon2.ataques.push({
-    nome: "Jato de Água",
-    dano: 40,
-    tipo: "Água",
-    precisao: 100
-});
+// b) Remove o último item da cópia do segundo array
+function removerUltimoItem(copiaArray) {
+    // O método pop() remove o último elemento de um array.
+    copiaArray.pop();
+    
+    console.log("\n--- b) Removendo o último item da cópia ---");
+    console.log("Array Original:", arrayDeStrings);
+    console.log("Cópia Modificada:", copiaArray);
+}
 
-// g) Imprima ambos os objetos no console.
-console.log("--- Objeto Original (Bulbasaur) ---");
-console.log(pokemon1);
 
-console.log("\n--- Cópia Modificada (Squirtle) ---");
-console.log(pokemon2);
+// c) Remove o segundo item da cópia do terceiro array
+function removerSegundoItem(copiaArray) {
+    // O método splice() altera o conteúdo de um array, removendo ou substituindo
+    // elementos existentes. `splice(1, 1)` significa: comece no índice 1 e remova 1 item.
+    copiaArray.splice(1, 1);
+
+    console.log("\n--- c) Removendo o segundo item da cópia ---");
+    console.log("Array Original:", arrayMisto);
+    console.log("Cópia Modificada:", copiaArray);
+}
+
+
+// Invocando as funções e passando as CÓPIAS dos arrays como parâmetros
+adicionarItemInicio(arrayDeNumerosCopia);
+removerUltimoItem(arrayDeStringsCopia);
+removerSegundoItem(arrayMistoCopia);

@@ -1,35 +1,21 @@
-// Crie um array vazio chamado sacolao
-const sacolao = [];
+// Exercício 1: Criação de Arrays
 
-// a) Fora do array, crie três objetos que vão representar frutas do sacolão.
-const fruta1 = {
-    nome: "Banana",
-    preco: 4.50,
-    disponibilidade: true
-};
+// 1. O primeiro array deve possuir apenas números, sem ordem específica.
+const arrayDeNumeros = [42, 15, 99, 7, 203, 58];
 
-const fruta2 = {
-    nome: "Morango",
-    preco: 10.99,
-    disponibilidade: false // Talvez esteja fora de época
-};
+// 2. O segundo array deve possuir apenas strings.
+const arrayDeStrings = ["JavaScript", "HTML", "CSS", "React", "Node.js"];
 
-const fruta3 = {
-    nome: "Abacaxi",
-    preco: 7.80,
-    disponibilidade: true
-};
+// 3. O terceiro array deve possuir números, strings e booleanos.
+const arrayMisto = [10, "Olá, mundo!", true, 25.5, false, "Fim do array"];
 
-// b) Adicione os objetos ao array sacolao utilizando o método push().
-console.log("Adicionando as frutas ao sacolão...");
 
-sacolao.push(fruta1);
-sacolao.push(fruta2);
-sacolao.push(fruta3);
+// Imprimindo cada um dos arrays no console com uma descrição
+console.log("1. Array de Números:");
+console.log(arrayDeNumeros);
 
-// c) Imprima o array sacolao, e certifique-se de que agora ele seja um array com três objetos.
-console.log("\n--- Conteúdo final do Sacolão ---");
-console.log(sacolao);
+console.log("\n2. Array de Strings:");
+console.log(arrayDeStrings);
 
-// Verificação adicional do tipo e tamanho do array
-console.log(`\nO array 'sacolao' tem ${sacolao.length} itens.`);
+console.log("\n3. Array Misto (Números, Strings e Booleanos):");
+console.log(arrayMisto);

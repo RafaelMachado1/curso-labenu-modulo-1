@@ -1,38 +1,37 @@
-// O objeto fornecido no exercício
-const filme = {
-	nome: "Auto da Compadecida", 
-	ano: 2000, 
-	elenco: [
-		"Matheus Nachtergaele", "Selton Mello", "Denise Fraga", 
-		"Virginia Cavendish"
-		], 
-	transmissoesHoje: [
-		{canal: "Telecine", horario: "21h"}, 
-		{canal: "Canal Brasil", horario: "19h"}, 
-		{canal: "Globo", horario: "14h"}
-		]
-};
+// Obs: copie os arrays criados no exercício 1 para dentro do arquivo script.js do exercício 2.
+const arrayDeNumeros = [42, 15, 99, 7, 203, 58];
+const arrayDeStrings = ["JavaScript", "HTML", "CSS", "React", "Node.js"];
+const arrayMisto = [10, "Olá, mundo!", true, 25.5, false, "Fim do array"];
 
-console.log("--- Respostas do Exercício 2 ---");
 
-// a) Qual o código para imprimir o nome do primeiro ator/atriz?
-// Acessamos o objeto 'filme', depois a propriedade 'elenco' (que é um array),
-// e por fim o primeiro item do array, que tem o índice [0].
-console.log("a) Primeiro ator/atriz:", filme.elenco[0]);
+// a) Crie uma função que recebe os 3 arrays e imprima a quantidade de itens de cada.
+function imprimirTamanhos(arr1, arr2, arr3) {
+    console.log("--- a) Tamanho de cada array ---");
+    console.log(`O primeiro array tem ${arr1.length} itens.`);
+    console.log(`O segundo array tem ${arr2.length} itens.`);
+    console.log(`O terceiro array tem ${arr3.length} itens.`);
+}
 
-// b) Qual o código para imprimir o nome do último ator/atriz?
-// Acessamos a propriedade 'elenco' e pegamos o item no índice 'tamanho do array - 1'.
-// Isso sempre nos dará o último item, não importa o tamanho do array.
-console.log("b) Último ator/atriz:", filme.elenco[filme.elenco.length - 1]);
 
-// c) Qual o código para exibir o array com todas as transmissões de hoje?
-// Acessamos o objeto 'filme' e depois a propriedade 'transmissoesHoje'.
-// O valor dessa propriedade já é o array completo.
-console.log("c) Todas as transmissões:", filme.transmissoesHoje);
+// b) Crie outra função que recebe os 3 arrays e imprima itens específicos.
+// c) Na mesma função, verifique a inclusão de itens.
+function analisarArrays(arrNum, arrStr, arrMix) {
+    console.log("\n--- b) Itens específicos de cada array ---");
+    console.log(`Primeiro item do primeiro array: ${arrNum[0]}`);   // Pega o item no índice 0
+    console.log(`Segundo item do segundo array: ${arrStr[1]}`);    // Pega o item no índice 1
+    console.log(`Terceiro item do terceiro array: ${arrMix[2]}`);   // Pega o item no índice 2
 
-// d) Qual o código para exibir o horário de transmissão do filme no Canal Brasil?
-// 1. Acessamos o array: filme.transmissoesHoje
-// 2. Olhando o array, vemos que o "Canal Brasil" é o segundo objeto, no índice [1].
-// 3. Acessamos esse objeto: filme.transmissoesHoje[1]
-// 4. Dentro desse objeto, acessamos a propriedade 'horario'.
-console.log("d) Horário no Canal Brasil:", filme.transmissoesHoje[1].horario);
+    console.log("\n--- c) Verificando se itens estão incluídos ---");
+    // Verificação para dar TRUE: o número 99 está no primeiro array?
+    const verificacao1 = arrNum.includes(99);
+    console.log(`O número 99 está incluído no primeiro array? ${verificacao1}`);
+
+    // Verificação para dar FALSE: a string "Python" está no terceiro array?
+    const verificacao2 = arrMix.includes("Python");
+    console.log(`A string "Python" está incluída no terceiro array? ${verificacao2}`);
+}
+
+
+// Invocando as funções e passando os arrays como parâmetros
+imprimirTamanhos(arrayDeNumeros, arrayDeStrings, arrayMisto);
+analisarArrays(arrayDeNumeros, arrayDeStrings, arrayMisto);
