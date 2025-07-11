@@ -1,15 +1,9 @@
 # Exercício 1
 
-Crie um array vazio chamado `sacolao`, e siga os passos abaixo:
+No primeiro exercício vamos praticar a **criação de arrays**. Crie 3 arrays diferentes:
 
-a) Fora do array, crie **três objetos** que vão representar frutas do sacolão. Os objetos devem ter as seguintes propriedades: 
+- O primeiro deve possuir apenas **números**, e estes números não devem seguir nenhuma ordem específica;
+- O segundo array deve possuir apenas **strings**;
+- O terceiro array deve possuir **números**, **strings** e **booleanos**.
 
-```jsx
-nome: string;
-preco: number;
-disponibilidade: boolean;
-```
-
-b) Adicione os objetos ao array `sacolao` utilizando o método **`push()`**.
-
-c) Imprima o array `sacolao`, e certifique-se de que agora ele seja um array **com três objetos**.
+Imprima cada um dos arrays acima, utilizando `console.log()`

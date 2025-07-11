@@ -1,30 +1,11 @@
 # Exercício 2
 
-Leia o código abaixo, e responda:
+Com os arrays criados no exercício 1, vamos fazer algumas observações. Faça o que se pede abaixo, utilizando `console.log()`:
 
-```jsx
-const filme = {
-	nome: "Auto da Compadecida", 
-	ano: 2000, 
-	elenco: [
-		"Matheus Nachtergaele", "Selton Mello", "Denise Fraga", 
-		"Virginia Cavendish"
-		], 
-	transmissoesHoje: [
-		{canal: "Telecine", horario: "21h"}, 
-		{canal: "Canal Brasil", horario: "19h"}, 
-		{canal: "Globo", horario: "14h"}
-		]
-}
-```
+a) Crie uma função que recebe os 3 arrays por parâmetro  e imprima a **quantidade de itens** de cada array (utilize o `console.log()` para cada impressão).
 
-a) Qual o código para imprimir o nome do **primeiro** ator/atriz?
+b) Crie outra função que recebe os 3 arrays por parâmetro e  imprima o **primeiro item** do primeiro array, o **segundo item** do segundo array, e o **terceiro item** do terceiro array.
 
-b) Qual o código para imprimir o nome do **último** ator/atriz?
+c) Na mesma função **Verifique** se um item está incluído no primeiro array e depois no terceiro array. Imprima o resultado dessas verificações no `console.log()`. A primeira impressão deve ser um booleano **true** e a segunda deve ser um booleano **false**.
 
-c) Qual o código para exibir o array com **todas** as transmissões de hoje?
-
-d) Qual o código para exibir o **horário** de transmissão do filme no **Canal Brasil**?
-
-
-**Dica:** construa os caminhos para chegar em cada valor **aos poucos**, sempre verificando o que é exibido no console.
+**Obs:** copie os arrays criados no exercício 1 para dentro do arquivo *script.js* do exercício 2.
