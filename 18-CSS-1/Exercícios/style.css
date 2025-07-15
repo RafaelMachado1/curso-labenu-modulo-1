@@ -1,0 +1,54 @@
+/* Seletor de tag 'main' para definir a fonte principal */
+main {
+    /* A fonte 'Impact' é mais parecida com a da imagem, com Arial como alternativa */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Seletor de classe '.bloco' para os estilos gerais de cada caixa */
+.bloco {
+    color: white;
+    margin: 10px; /* Aumentei a margem para mais espaço */
+    width: 350px; /* Aumentei a largura para o texto caber melhor */
+    text-align: center;
+    padding: 20px 10px; /* Adicionado padding para dar espaço interno */
+    border-radius: 5px; /* Adicionado para arredondar as bordas */
+}
+
+/* Estilos específicos para o Título (h1) dentro dos blocos */
+.bloco h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    /* A altura da linha foi movida para cá para espaçar corretamente do parágrafo */
+    line-height: 1.2; 
+}
+
+/* Estilos específicos para o Parágrafo (p) dentro dos blocos */
+.bloco p {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte mais simples para o subtítulo */
+    font-size: 14px; /* Tamanho da fonte do parágrafo */
+    font-weight: normal; /* Garante que não fique em negrito */
+    margin-top: 5px;
+}
+
+/* Seletor de ID para o Bloco 1 */
+#bloco-1 {
+    background-color: rgb(246, 182, 20);
+    border: 3px solid rgb(195, 137, 11);
+}
+
+/* Seletor de ID para o Bloco 2 */
+#bloco-2 {
+    background-color: rgb(20, 246, 65);
+    border: 3px solid rgb(11, 195, 42);
+}
+
+/* Seletor de ID para o Bloco 3 */
+#bloco-3 {
+    background-color: rgb(26, 75, 1);
+    border: 3px dashed rgb(167, 253, 148);
+}
+
+/* Seletor de ID para o Bloco 4 */
+#bloco-4 {
+    background-color: rgb(246, 20, 20);
+    border: 3px dashed rgb(254, 57, 57);
+}
