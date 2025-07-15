@@ -1,0 +1,94 @@
+/* Reset básico e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilização do Cabeçalho */
+header {
+    width: 800px; 
+    margin: 40px auto 20px auto; 
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header h3 {
+    font-weight: normal; 
+    font-style: italic; 
+    margin-top: 5px;
+}
+
+/* Layout Principal */
+main {
+    width: 800px; 
+    margin: 0 auto; 
+    
+}
+
+/* Seção de Texto Principal */
+section {
+    width: 100%; 
+}
+
+section p {
+    margin-bottom: 1.5em; 
+    line-height: 1.5; 
+    text-align: justify; 
+}
+
+/* Barra Lateral (Assinatura) - CORREÇÃO PRINCIPAL AQUI */
+aside {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    width: 200px; /* Largura fixa para o bloco */
+    
+    /* A mágica acontece aqui: */
+    float: right; /* Faz o elemento "flutuar" para a direita */
+    margin-left: 20px; /* Cria espaço à esquerda, separando do texto */
+    margin-bottom: 10px; /* Cria espaço abaixo */
+}
+
+aside h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    text-align: center; /* Garante o alinhamento central */
+}
+
+aside button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    /* O clear: both garante que o footer só comece APÓS o float terminar */
+    clear: both;
+}
